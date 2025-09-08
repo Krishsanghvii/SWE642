@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Visit Survey - George Mason University</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Student Survey.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="krishsanghvi.html" style="color: #FFCC33;">GMU Survey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="krishsanghvi.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CS Department.html">CS Department</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Student Survey.html">Campus Survey</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-box">
+                        <h1>Campus Visit Survey</h1>
+                        <p class="lead">Help us improve your campus experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Student Survey Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="survey-card">
+                        <h2 class="survey-title">Campus Visit Feedback Form</h2>
+                        <p class="text-muted mb-4">Please take a few minutes to share your thoughts about your visit to our campus.</p>
+                        
+                        <form id="surveyForm" autocomplete="on" novalidate>
+                            <!-- Personal Information Section -->
+                            <div class="form-section">
+                                <h4 class="section-heading">Personal Information</h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="username" class="form-label required-field">Full Name *</label>
+                                        <input type="text" class="form-control" id="username" name="username" 
+                                               placeholder="Enter your full name" required autocomplete="name">
+                                        <div class="invalid-feedback">Please enter your full name.</div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label required-field">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" 
+                                               placeholder="example@email.com" required autocomplete="email">
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="telephone" class="form-label required-field">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="telephone" name="telephone" 
+                                               placeholder="(123) 456-7890" required autocomplete="tel">
+                                        <div class="invalid-feedback">Please enter your phone number.</div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-3">
+                                        <label for="website" class="form-label">Website/Portfolio</label>
+                                        <input type="url" class="form-control" id="website" name="website" 
+                                               placeholder="https://yourwebsite.com" autocomplete="url">
+                                        <div class="invalid-feedback">Please enter a valid URL.</div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address" class="form-label required-field">Street Address *</label>
+                                    <input type="text" class="form-control" id="address" name="address" 
+                                           placeholder="123 Main Street" required autocomplete="street-address">
+                                    <div class="invalid-feedback">Please enter your street address.</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city" class="form-label required-field">City *</label>
+                                        <input type="text" class="form-control" id="city" name="city" 
+                                               placeholder="Enter city" required autocomplete="address-level2">
+                                        <div class="invalid-feedback">Please enter your city.</div>
+                                    </div>
+                                    
+                                    <div class="col-md-3 mb-3">
+                                        <label for="state" class="form-label required-field">State *</label>
+                                        <input type="text" class="form-control" id="state" name="state" 
+                                               placeholder="VA" required autocomplete="address-level1">
+                                        <div class="invalid-feedback">Please enter your state.</div>
+                                    </div>
+                                    
+                                    <div class="col-md-3 mb-3">
+                                        <label for="zip" class="form-label required-field">ZIP Code *</label>
+                                        <input type="text" class="form-control" id="zip" name="zip" 
+                                               placeholder="12345" required autocomplete="postal-code">
+                                        <div class="invalid-feedback">Please enter your ZIP code.</div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="graduationMonth" class="form-label">High School Graduation Month</label>
+                                        <input type="text" class="form-control" id="graduationMonth" name="graduationMonth" 
+                                               list="monthsList" placeholder="Select or type month" autocomplete="off">
+                                        <datalist id="monthsList">
+                                            <option value="January">
+                                            <option value="February">
+                                            <option value="March">
+                                            <option value="April">
+                                            <option value="May">
+                                            <option value="June">
+                                            <option value="July">
+                                            <option value="August">
+                                            <option value="September">
+                                            <option value="October">
+                                            <option value="November">
+                                            <option value="December">
+                                        </datalist>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-3">
+                                        <label for="graduationYear" class="form-label">Graduation Year</label>
+                                        <input type="number" class="form-control" id="graduationYear" name="graduationYear" 
+                                               placeholder="2024" min="1950" max="2030">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="surveyDate" class="form-label required-field">Date of Survey *</label>
+                                    <input type="date" class="form-control" id="surveyDate" name="surveyDate" required>
+                                    <div class="invalid-feedback">Please select the survey date.</div>
+                                </div>
+                            </div>
+
+                            <!-- Campus Experience Section -->
+                            <div class="form-section">
+                                <h4 class="section-heading">Campus Experience</h4>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">What did you like most about the campus? (Check all that apply)</label>
+                                    <div class="checkbox-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="students" name="liked[]" value="students">
+                                            <label class="form-check-label" for="students">Students</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="location" name="liked[]" value="location">
+                                            <label class="form-check-label" for="location">Location</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="campus" name="liked[]" value="campus">
+                                            <label class="form-check-label" for="campus">Campus</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="atmosphere" name="liked[]" value="atmosphere">
+                                            <label class="form-check-label" for="atmosphere">Atmosphere</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="dormRooms" name="liked[]" value="dorm rooms">
+                                            <label class="form-check-label" for="dormRooms">Dorm Rooms</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="sports" name="liked[]" value="sports">
+                                            <label class="form-check-label" for="sports">Sports</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label required-field">How did you become interested in the university? *</label>
+                                    <div class="radio-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="friends" name="interest" value="friends" required>
+                                            <label class="form-check-label" for="friends">Friends</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="television" name="interest" value="television" required>
+                                            <label class="form-check-label" for="television">Television</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="internet" name="interest" value="internet" required>
+                                            <label class="form-check-label" for="internet">Internet</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="other" name="interest" value="other" required>
+                                            <label class="form-check-label" for="other">Other</label>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback">Please select how you became interested in the university.</div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="likelihood" class="form-label required-field">How likely are you to recommend this school to other prospective students? *</label>
+                                    <select class="form-select" id="likelihood" name="likelihood" required>
+                                        <option value="">Select likelihood</option>
+                                        <option value="Very Likely">Very Likely</option>
+                                        <option value="Likely">Likely</option>
+                                        <option value="Unlikely">Unlikely</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select the likelihood of recommendation.</div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="comments" class="form-label">Additional Comments</label>
+                                    <textarea class="form-control" id="comments" name="comments" rows="5" 
+                                              placeholder="Please share any additional thoughts about your campus visit..."></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-gmu-green btn-lg px-5">
+                                    Submit Survey
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 George Mason University. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>SWE 642 - Assignment 1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set focus to first input field when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('username').focus();
+            
+            // Set today's date as default for survey date
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('surveyDate').value = today;
+        });
+
+        // Form validation
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (this.checkValidity()) {
+                alert('Thank you for your feedback! Your survey has been submitted successfully.');
+                this.reset();
+                document.getElementById('username').focus();
+                // Set today's date again after reset
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('surveyDate').value = today;
+            } else {
+                this.classList.add('was-validated');
+            }
+        });
+    </script>
+</body>
+</html>

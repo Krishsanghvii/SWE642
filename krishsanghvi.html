@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML head setup with viewport and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krish Sanghvi - Student Homepage</title>
+
+    <!-- Bootstrap CSS for responsive layout and component styling -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS file for personalized design (colors, layout, etc.) -->
+    <link rel="stylesheet" href="krishsanghvi.css">
+</head>
+
+<body>
+
+    <!-- Top navigation bar with responsive toggle, links to homepage, about, and CS department -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Navbar brand/logo styled with GMU yellow -->
+            <a class="navbar-brand" href="#" style="color: #FFCC33;">Krish Sanghvi</a>
+            <!-- Mobile menu toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links on the right side -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="krishsanghvi.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link" href="CS Department.html">CS Department</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Top full-height banner with introductory text and an image of myself -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <!-- Left side: Welcome message, description, and call-to-action buttons -->
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4">Welcome to My Homepage</h1>
+                        <p class="lead mb-4">Computer Science Graduate Student at George Mason University</p>
+                        <div class="mb-4">
+                            <a href="#about" class="btn btn-gmu-green btn-lg me-3">Learn More</a>
+                            <a href="CS Department.html" class="btn btn-outline-warning btn-lg">Visit CS Department</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side: Circular profile photo -->
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="IMG_7477.jpeg" 
+                             alt="Krish Sanghvi" 
+                             class="profile-image img-fluid rounded-circle shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Includes academic background, personal interests, and technical skills -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="about-box">
+                        <!-- Section title -->
+                        <h2 class="section-title text-center mb-5">About Me</h2>
+                        <div class="row">
+                            <!-- Background Column -->
+                            <div class="col-md-6">
+                                <h4 class="mb-3" style="color: #006633;">Background</h4>
+                                <p>I am a dedicated Computer Science graduate student at George Mason University, passionate about software engineering and web development. With a strong foundation in programming languages and modern development frameworks, I am committed to creating innovative solutions to complex problems.</p>
+                            </div>
+                            <!-- Interests Column -->
+                            <div class="col-md-6">
+                                <h4 class="mb-3" style="color: #006633;">Academic Focus</h4>
+                                <p>My primary interests include full-stack web development, machine learning, and cloud computing. I enjoy working on projects that combine theoretical knowledge with practical applications, and I am always eager to learn new technologies and methodologies.</p>
+                            </div>
+                        </div>
+
+                        <!-- Skills and technologies (displayed as badges) -->
+                        <div class="row mt-4">
+                            <div class="col-md-12">
+                                <h4 class="mb-3" style="color: #006633;">Skills & Technologies</h4>
+                                <div class="skill-tags">
+                                    <!-- Tech skill tags shown as Bootstrap badges -->
+                                    <span class="badge bg-secondary me-2 mb-2">Java</span>
+                                    <span class="badge bg-secondary me-2 mb-2">Python</span>
+                                    <span class="badge bg-secondary me-2 mb-2">JavaScript</span>
+                                    <span class="badge bg-secondary me-2 mb-2">HTML5</span>
+                                    <span class="badge bg-secondary me-2 mb-2">CSS3</span>
+                                    <span class="badge bg-secondary me-2 mb-2">Bootstrap</span>
+                                    <span class="badge bg-secondary me-2 mb-2">PHP</span>
+                                    <span class="badge bg-secondary me-2 mb-2">AI/ML</span>
+                                    <span class="badge bg-secondary me-2 mb-2">AWS</span>
+                                    <span class="badge bg-secondary me-2 mb-2">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.about-box -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-5">Academic Projects</h2>
+                    <div class="text-center mb-4">
+                        <a href="https://github.com/krishsanghvii" target="_blank" class="btn btn-gmu-green btn-lg">
+                            <i class="fab fa-github me-2"></i>View My GitHub Profile
+                        </a>
+                    </div>
+                    <div class="row">
+                        <!-- Project 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #006633;">University Recommender System</h5>
+                                    <p class="card-text">This University Recommendation System is a web-based application built using Flask, Python, and Scikit-learn. It recommends universities to users based on their SAT scores and tuition fee preferences for undergraduate and graduate programs. The application uses K-Nearest Neighbors (KNN) for making predictions and recommendations.</p>
+                                    <a href="https://github.com/Krishsanghvii/University-Recommender-System" target="_blank" class="btn btn-outline-success">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #006633;">Real Estate Project</h5>
+                                    <p class="card-text">This project involves the creation of a responsive real estate website that allows users to browse various real estate properties, view property details, and get in touch with agents. The website uses modern web development techniques, including HTML, CSS, and JavaScript, to ensure a visually appealing and responsive design.</p>
+                                    <a href="https://github.com/Krishsanghvii/Real-Estate-Project" target="_blank" class="btn btn-outline-success">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm project-card">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color: #006633;">Comment Toxicity Classifier</h5>
+                                    <p class="card-text">Creating a model for classifying toxic comments on the web by using deep learning and gradio app.</p>
+                                    <a href="https://github.com/Krishsanghvii/Comment-Toxicity-Classifier" target="_blank" class="btn btn-outline-success">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Interests Section -->
+    <section id="interests" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-5">Personal Interests</h2>
+                    <div class="row">
+                        <!-- Football -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100 shadow-sm interest-card">
+                                <img src="football.jpeg" 
+                                     class="card-img-top interest-image" alt="Football">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #006633;">Football</h5>
+                                    <p class="card-text">Passionate about both playing and watching football. Follow NFL and college games regularly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hiking -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100 shadow-sm interest-card">
+                                <img src="hiking.jpeg" 
+                                     class="card-img-top interest-image" alt="Hiking">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #006633;">Hiking</h5>
+                                    <p class="card-text">Love exploring nature trails and mountain paths. Virginia's Shenandoah National Park is a favorite destination.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kayaking -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100 shadow-sm interest-card">
+                                <img src="kayak.jpeg" 
+                                     class="card-img-top interest-image" alt="Kayaking">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #006633;">Kayaking</h5>
+                                    <p class="card-text">Enjoy peaceful water adventures and exploring rivers and lakes around the DMV area.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Photography -->
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100 shadow-sm interest-card">
+                                <img src="photography.jpeg" 
+                                     class="card-img-top interest-image" alt="Photography">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #006633;">Photography</h5>
+                                    <p class="card-text">Capturing moments and landscapes through the lens. Specializing in nature and outdoor photography.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section: Navigation tiles linking to CS Department and Student Survey -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-5">Quick Links</h2>
+                    <div class="row">
+                        <!-- Card: CS Department Info -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #006633;">CS Department Information</h5>
+                                    <p class="card-text">
+                                        Learn about the Computer Science department at George Mason University, including all the degree programs offered along with their course requirements.
+                                    </p>
+                                    <a href="CS Department.html" class="btn btn-gmu-green">Visit Page</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card: Student Survey -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title" style="color: #006633;">Campus Survey</h5>
+                                    <p class="card-text">
+                                        Prospective students can provide feedback about their campus visit through our comprehensive survey form.
+                                    </p>
+                                    <a href="Student Survey.html" class="btn btn-gmu-green">Take Survey</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Bottom section of the website with copyright -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Left: Copyright -->
+                <div class="col-md-6">
+                    <p>&copy; 2025 Krish Sanghvi. All rights reserved.</p>
+                </div>
+                <!-- Right: Assignment reference -->
+                <div class="col-md-6 text-end">
+                    <p>SWE 642 - Assignment 1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS for interactivity and responsive navbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+/* GMU Color Scheme Variables */
+:root {
+    --gmu-green: #006633;
+    --gmu-yellow: #FFCC33;
+    --light-gray: #f8f9fa;
+}
+
+/* Body Background with Full Page Gradient */
+body {
+    background: linear-gradient(135deg, var(--gmu-green), #a0072d);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Overlay pattern for entire page */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,204,51,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* H1 Elements in White (since background is dark now) */
+h1 {
+    color: white !important;
+}
+
+/* Custom GMU Green Button Class */
+.btn-gmu-green {
+    background-color: var(--gmu-green);
+    border-color: var(--gmu-green);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-gmu-green:hover {
+    background-color: #004d26;
+    border-color: #004d26;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Hero Section - Remove gradient since body has it now */
+.hero-section {
+    background: transparent;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Remove the before pseudo-element since body has the pattern */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid var(--gmu-yellow);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+/* Section Title with Box */
+.section-title {
+    color: var(--gmu-green);
+    font-weight: bold;
+    padding: 20px;
+    border: 5px solid var(--gmu-green);
+    box-shadow: 0 8px 16px rgba(0, 102, 51, 0.2);
+    background-color: white;
+    display: inline-block;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+}
+
+/* About Box - Make semi-transparent to show gradient */
+.about-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid var(--gmu-green);
+    color: #000; /* Black text for entire about box */
+}
+
+/* About section text styling */
+.about-box h4 {
+    color: var(--gmu-green) !important; /* Keep headings in GMU green */
+}
+
+.about-box p {
+    color: #000 !important; /* Black text for paragraphs */
+}
+
+/* Skill Tags */
+.skill-tags .badge {
+    font-size: 0.9em;
+    padding: 8px 12px;
+    background-color: var(--gmu-green) !important;
+}
+
+/* Card Hover Effects - Make cards semi-transparent */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-top: 3px solid var(--gmu-green);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* Project Cards Styling */
+.project-card {
+    border-left: 4px solid var(--gmu-green);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-left: 4px solid var(--gmu-yellow);
+    transform: translateY(-8px);
+}
+
+.project-card .btn-outline-success {
+    border-color: var(--gmu-green);
+    color: var(--gmu-green);
+}
+
+.project-card .btn-outline-success:hover {
+    background-color: var(--gmu-green);
+    border-color: var(--gmu-green);
+    color: white;
+}
+
+/* Interest Cards Styling */
+.interest-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.interest-card:hover {
+    border: 2px solid var(--gmu-yellow);
+    transform: scale(1.05);
+}
+
+.interest-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover .interest-image {
+    transform: scale(1.1);
+}
+
+/* GitHub Button Styling */
+.btn-lg i {
+    font-size: 1.2em;
+}
+
+/* Quick Links Section - Make background semi-transparent */
+.py-5.bg-light {
+    background-color: rgba(248, 249, 250, 0.1) !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Navigation - Make it blend with gradient */
+.navbar-dark.bg-dark {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--gmu-yellow) !important;
+}
+
+/* Footer - Make it blend with gradient */
+footer {
+    background: linear-gradient(135deg, var(--gmu-green), #a0072d); /* matches hero gradient */
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .hero-section {
+        text-align: center;
+        padding: 50px 0;
+    }
+    
+    .about-box {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        padding: 15px;
+    }
+
+    .interest-image {
+        height: 150px;
+    }
+
+    .project-card, .interest-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gmu-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004d26;
+}
+
+/* Additional styling for better contrast on gradient background */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Make sure text is readable on gradient background */
+.py-5:not(.bg-light) {
+    color: white;
+}
+
+.py-5:not(.bg-light) p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Adjust section backgrounds */
+section:not(.bg-light) {
+    background-color: transparent !important;
+}
+
+/* Special styling for sections with cards on gradient background */
+#projects .card-text,
+#interests .card-text {
+    color: #666 !important;
+}
+
+#projects .card-title,
+#interests .card-title {
+    color: var(--gmu-green) !important;
+}
+
+/* Animation for project and interest cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card,
+.interest-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger animation for cards */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+.interest-card:nth-child(1) { animation-delay: 0.1s; }
+.interest-card:nth-child(2) { animation-delay: 0.2s; }
+.interest-card:nth-child(3) { animation-delay: 0.3s; }
+.interest-card:nth-child(4) { animation-delay: 0.4s; }

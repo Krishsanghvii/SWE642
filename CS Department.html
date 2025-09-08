@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Department Information - George Mason University</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CS Department.css">
+    <style>
+        /* Additional styles for clickable degree names */
+        .degree-link {
+            text-decoration: none;
+            color: #003366;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            border-left: 4px solid #006633;
+            margin: 15px 0;
+        }
+        
+        .degree-link:hover {
+            color: #006633;
+            background: #e9ecef;
+            transform: translateX(5px);
+            text-decoration: none;
+        }
+        
+        .course-details {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #006633;
+        }
+        
+        .program-info {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #006633;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #006633;
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 102, 51, 0.25);
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .career-list {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        .career-list li {
+            margin-bottom: 8px;
+            break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="CS Department.html" style="color: #FFCC33;">GMU CS Department</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="krishsanghvi.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#degrees">Degrees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Student Survey.html">Campus Survey</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-box">
+                        <h1>Computer Science Department</h1>
+                        <p class="lead">George Mason University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Department Description -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="content-card">
+                        <h2>About the Department</h2>
+                        <p class="lead">
+                            The Computer Science Department at George Mason University is a leading center for computing education and research. Our department offers comprehensive programs that prepare students for successful careers in the rapidly evolving field of computer science and information technology.
+                        </p>
+                        <p>
+                            With a faculty of renowned researchers and industry experts, we provide students with cutting-edge knowledge in areas such as software engineering, artificial intelligence, cybersecurity, data science, and human-computer interaction. Our programs emphasize both theoretical foundations and practical applications, ensuring graduates are well-equipped to tackle real-world challenges in technology and innovation.
+                        </p>
+                        <div class="mt-4">
+                            <a href="Student Survey.html" class="btn btn-gmu-green btn-lg">
+                                Take Our Campus Survey
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MS Degrees Section -->
+    <section id="degrees" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center mb-5">Master of Science Degree Programs</h2>
+                    
+                    <!-- Degree Programs Accordion -->
+                    <div class="row">
+                        <div class="col-lg-10 mx-auto">
+                            <div class="accordion" id="degreesAccordion">
+                                
+                                <!-- MS Computer Science -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingCS">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCS" aria-expanded="false" aria-controls="collapseCS">
+                                            MS in Computer Science
+                                        </button>
+                                    </h2>
+                                    <div id="collapseCS" class="accordion-collapse collapse" aria-labelledby="headingCS" data-bs-parent="#degreesAccordion">
+                                        <div class="accordion-body">
+                                            <div class="program-info">
+                                                <h4>Program Overview</h4>
+                                                <p class="lead">Advance your expertise in computational theory, software development, and emerging technologies with our comprehensive Computer Science master's program.</p>
+                                                
+                                                <div class="row mt-4">
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">30</div>
+                                                            <div class="stat-label">Credit Hours</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">2</div>
+                                                            <div class="stat-label">Years (Full-time)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">5</div>
+                                                            <div class="stat-label">Core Courses</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="table-card">
+                                                <h4>Required Core Courses</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>Course Number</th>
+                                                                <th>Course Name</th>
+                                                                <th>Credits</th>
+                                                                <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>CS 583</td>
+                                                                <td>Analysis of Algorithms</td>
+                                                                <td>3</td>
+                                                                <td>Advanced algorithmic techniques and complexity analysis</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 580</td>
+                                                                <td>Introduction to Artificial Intelligence</td>
+                                                                <td>3</td>
+                                                                <td>Machine learning, neural networks, and AI applications</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 571</td>
+                                                                <td>Operating Systems</td>
+                                                                <td>3</td>
+                                                                <td>System design, process management, and memory systems</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 555</td>
+                                                                <td>Computer Communications and Networking</td>
+                                                                <td>3</td>
+                                                                <td>Network protocols, security, and distributed systems</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 540</td>
+                                                                <td>Database Concepts</td>
+                                                                <td>3</td>
+                                                                <td>Database design, SQL, and data management systems</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="course-details">
+                                                <h5>Career Opportunities</h5>
+                                                <ul class="career-list">
+                                                    <li>Software Engineer</li>
+                                                    <li>Data Scientist</li>
+                                                    <li>AI/ML Engineer</li>
+                                                    <li>Systems Architect</li>
+                                                    <li>Research Scientist</li>
+                                                    <li>Technical Lead</li>
+                                                    <li>Database Administrator</li>
+                                                    <li>Academic Positions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MS Software Engineering -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSWE">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSWE" aria-expanded="false" aria-controls="collapseSWE">
+                                            MS in Software Engineering
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSWE" class="accordion-collapse collapse" aria-labelledby="headingSWE" data-bs-parent="#degreesAccordion">
+                                        <div class="accordion-body">
+                                            <div class="program-info">
+                                                <h4>Program Overview</h4>
+                                                <p class="lead">Master the art and science of building large-scale, reliable software systems with industry-focused practices and methodologies.</p>
+                                                
+                                                <div class="row mt-4">
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">30</div>
+                                                            <div class="stat-label">Credit Hours</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">2</div>
+                                                            <div class="stat-label">Years (Full-time)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">5</div>
+                                                            <div class="stat-label">Core Courses</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="table-card">
+                                                <h4>Required Core Courses</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>Course Number</th>
+                                                                <th>Course Name</th>
+                                                                <th>Credits</th>
+                                                                <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>SWE 619</td>
+                                                                <td>Object-Oriented Software Specification and Construction</td>
+                                                                <td>3</td>
+                                                                <td>Advanced OOP principles and design patterns</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>SWE 637</td>
+                                                                <td>Software Testing</td>
+                                                                <td>3</td>
+                                                                <td>Testing methodologies, automation, and quality assurance</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>SWE 642</td>
+                                                                <td>Software Engineering for the World Wide Web</td>
+                                                                <td>3</td>
+                                                                <td>Modern web technologies and frameworks</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>SWE 645</td>
+                                                                <td>Component-Based Software Development</td>
+                                                                <td>3</td>
+                                                                <td>Modular design and component architectures</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>SWE 681</td>
+                                                                <td>Software Modeling and Architectural Design</td>
+                                                                <td>3</td>
+                                                                <td>System architecture and design methodologies</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="course-details">
+                                                <h5>Program Highlights</h5>
+                                                <ul>
+                                                    <li>Industry-focused software development practices</li>
+                                                    <li>Comprehensive testing and quality assurance methods</li>
+                                                    <li>Modern web development technologies</li>
+                                                    <li>Software architecture and design patterns</li>
+                                                    <li>Hands-on project experience</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MS Information Systems -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingIS">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIS" aria-expanded="false" aria-controls="collapseIS">
+                                            MS in Information Systems
+                                        </button>
+                                    </h2>
+                                    <div id="collapseIS" class="accordion-collapse collapse" aria-labelledby="headingIS" data-bs-parent="#degreesAccordion">
+                                        <div class="accordion-body">
+                                            <div class="content-card">
+                                                <h4>Program Overview</h4>
+                                                <p class="lead">Bridge technology and business with comprehensive information systems expertise, focusing on enterprise solutions and data management.</p>
+                                                
+                                                <div class="row mt-4">
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">30</div>
+                                                            <div class="stat-label">Credit Hours</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">2</div>
+                                                            <div class="stat-label">Years (Full-time)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">5</div>
+                                                            <div class="stat-label">Core Courses</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="table-card">
+                                                <h4>Required Core Courses</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>Course Number</th>
+                                                                <th>Course Name</th>
+                                                                <th>Credits</th>
+                                                                <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>ISA 562</td>
+                                                                <td>Information Systems Analysis and Design</td>
+                                                                <td>3</td>
+                                                                <td>Systems development lifecycle and methodologies</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ISA 564</td>
+                                                                <td>Database Theory and Application</td>
+                                                                <td>3</td>
+                                                                <td>Advanced database concepts and enterprise systems</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ISA 566</td>
+                                                                <td>Information System Project Management</td>
+                                                                <td>3</td>
+                                                                <td>IT project planning, execution, and management</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ISA 673</td>
+                                                                <td>Data Warehousing and Data Mining</td>
+                                                                <td>3</td>
+                                                                <td>Business intelligence and analytics systems</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>ISA 681</td>
+                                                                <td>Information Security and Privacy</td>
+                                                                <td>3</td>
+                                                                <td>Enterprise security and privacy compliance</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="content-card mt-3">
+                                                <h5>Career Focus Areas</h5>
+                                                <ul class="career-list">
+                                                    <li>Systems Analysis</li>
+                                                    <li>Project Management</li>
+                                                    <li>Business Intelligence</li>
+                                                    <li>Database Administration</li>
+                                                    <li>IT Consulting</li>
+                                                    <li>Enterprise Architecture</li>
+                                                    <li>Data Management</li>
+                                                    <li>Information Security</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MS Data Analytics Engineering -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingDAE">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDAE" aria-expanded="false" aria-controls="collapseDAE">
+                                            MS in Data Analytics Engineering
+                                        </button>
+                                    </h2>
+                                    <div id="collapseDAE" class="accordion-collapse collapse" aria-labelledby="headingDAE" data-bs-parent="#degreesAccordion">
+                                        <div class="accordion-body">
+                                            <div class="program-info">
+                                                <h4>Program Overview</h4>
+                                                <p class="lead">Transform raw data into actionable insights with advanced analytics, machine learning, and big data technologies.</p>
+                                                
+                                                <div class="row mt-4">
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">30</div>
+                                                            <div class="stat-label">Credit Hours</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">2</div>
+                                                            <div class="stat-label">Years (Full-time)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">5</div>
+                                                            <div class="stat-label">Core Courses</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="table-card">
+                                                <h4>Required Core Courses</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>Course Number</th>
+                                                                <th>Course Name</th>
+                                                                <th>Credits</th>
+                                                                <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>CS 587</td>
+                                                                <td>Data Mining and Knowledge Discovery</td>
+                                                                <td>3</td>
+                                                                <td>Advanced data mining techniques and algorithms</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 584</td>
+                                                                <td>Data Mining: Theory and Applications</td>
+                                                                <td>3</td>
+                                                                <td>Practical applications of data mining in industry</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>STAT 544</td>
+                                                                <td>Applied Probability</td>
+                                                                <td>3</td>
+                                                                <td>Statistical foundations for data analysis</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 688</td>
+                                                                <td>Machine Learning</td>
+                                                                <td>3</td>
+                                                                <td>ML algorithms and neural network implementations</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CS 689</td>
+                                                                <td>Big Data Analytics</td>
+                                                                <td>3</td>
+                                                                <td>Large-scale data processing and distributed computing</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="course-details">
+                                                <h5>Key Technologies & Skills</h5>
+                                                <ul class="career-list">
+                                                    <li>Python & R Programming</li>
+                                                    <li>Machine Learning Algorithms</li>
+                                                    <li>Big Data Frameworks (Hadoop, Spark)</li>
+                                                    <li>Statistical Analysis</li>
+                                                    <li>Data Visualization</li>
+                                                    <li>Predictive Modeling</li>
+                                                    <li>Database Systems</li>
+                                                    <li>Business Intelligence</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MS Cybersecurity Engineering -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingCyber">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCyber" aria-expanded="false" aria-controls="collapseCyber">
+                                            MS in Cybersecurity Engineering
+                                        </button>
+                                    </h2>
+                                    <div id="collapseCyber" class="accordion-collapse collapse" aria-labelledby="headingCyber" data-bs-parent="#degreesAccordion">
+                                        <div class="accordion-body">
+                                            <div class="program-info">
+                                                <h4>Program Overview</h4>
+                                                <p class="lead">Protect digital assets and infrastructure with cutting-edge cybersecurity expertise, focusing on both defensive and offensive security strategies.</p>
+                                                
+                                                <div class="row mt-4">
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">30</div>
+                                                            <div class="stat-label">Credit Hours</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">2</div>
+                                                            <div class="stat-label">Years (Full-time)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="stat-box">
+                                                            <div class="stat-number">5</div>
+                                                            <div class="stat-label">Core Courses</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="table-card">
+                                                <h4>Required Core Courses</h4>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>Course Number</th>
+                                                                <th>Course Name</th>
+                                                                <th>Credits</th>
+                                                                <th>Description</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>CYSE 550</td>
+                                                                <td>Cybersecurity Fundamentals</td>
+                                                                <td>3</td>
+                                                                <td>Core principles of information security</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CYSE 570</td>
+                                                                <td>Network Security</td>
+                                                                <td>3</td>
+                                                                <td>Network protocols, firewalls, and intrusion detection</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CYSE 571</td>
+                                                                <td>Secure Software Engineering</td>
+                                                                <td>3</td>
+                                                                <td>Secure coding practices and vulnerability assessment</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CYSE 580</td>
+                                                                <td>Digital Forensics</td>
+                                                                <td>3</td>
+                                                                <td>Incident response and forensic investigation techniques</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>CYSE 585</td>
+                                                                <td>Cryptography and Network Security</td>
+                                                                <td>3</td>
+                                                                <td>Advanced encryption and security protocols</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="course-details">
+                                                <h5>Specialization Areas</h5>
+                                                <ul class="career-list">
+                                                    <li>Network Security</li>
+                                                    <li>Digital Forensics</li>
+                                                    <li>Penetration Testing</li>
+                                                    <li>Cryptography</li>
+                                                    <li>Incident Response</li>
+                                                    <li>Security Architecture</li>
+                                                    <li>Risk Assessment</li>
+                                                    <li>Compliance & Governance</li>
+                                                </ul>
+                                                
+                                                <h5 class="mt-4">Industry Certifications Preparation</h5>
+                                                <p>This program prepares students for industry-standard certifications including CISSP, CEH, CISM, and GIAC Security Essentials.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 George Mason University CS Department. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>SWE 642 - Assignment 1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
